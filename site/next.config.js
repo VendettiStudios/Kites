@@ -1,18 +1,9 @@
-const commerce = require('./commerce.config.json')
-const { withCommerceConfig } = require('./commerce-config')
-
-module.exports = withCommerceConfig({
-  commerce,
-  i18n: {
-    locales: ['en-US', 'es'],
-    defaultLocale: 'en-US',
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    esmExternals: 'loose',
   },
-  rewrites() {
-    return [
-      {
-        source: '/checkout',
-        destination: '/api/commerce/checkout',
-      },
-    ]
-  },
-})
+}
+console.log('next.config.js', JSON.stringify(module.exports, null, 2))
+module.exports = nextConfig

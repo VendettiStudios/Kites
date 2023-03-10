@@ -1,12 +1,84 @@
 {
-  "name": "Kites By Carla Manuel",
-  "version": "1.0.0",
-  "description": "",
-  "main": "postcss.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "kites",
+  "version": "0.0.1",
+  "description": "",  
   "keywords": [],
   "author": "Daniel Holloway",
-  "license": "ISC"
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "BUNDLE_ANALYZE=both next build",
+    "lint": "next lint",
+    "prettier-fix": "prettier --write .",
+    "find:unused": "npx next-unused"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "autoprefixer": "^10.4.13",
+    "clsx": "^1.2.1",
+    "js-cookie": "^3.0.1",
+    "next": "^13.2.3",
+    "postcss": "^8.4.21",
+    "postcss-nesting": "^11.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-merge-refs": "^2.0.1",
+    "tabbable": "^6.1.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^13.2.3",
+    "@types/js-cookie": "^3.0.3",
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.35.0",
+    "eslint-config-next": "^13.2.3",
+    "eslint-config-prettier": "^8.6.0",
+    "lint-staged": "^13.1.2",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "prettier": "^2.8.4",
+    "typescript": "4.9.5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{md,mdx,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "next-unused": {
+    "alias": {
+      "@lib/*": [
+        "lib/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ]
+    },"debug": true,
+    "include": [
+      "components",
+      "lib",
+      "pages"
+    ],
+    "exclude": [],
+    "entrypoints": [
+      "pages"
+    ]
+  }
 }
