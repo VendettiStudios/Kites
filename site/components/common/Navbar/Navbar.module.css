@@ -33,13 +33,10 @@
     }
 }
 
-
 .logo{
     cursor: pointer;
-    /* border-radius: 9999px; */
     height: 80%;
     width: 40%;
-    border-width: 1px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     transition-duration: 100ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
