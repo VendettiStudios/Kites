@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './hamburger.module.css';
+import s from './Hamburger.module.css';
 
 interface HamburgerProps {
   onHamburgerClick: () => void;
@@ -14,10 +14,10 @@ const Hamburger: React.FC<HamburgerProps> = ({ onHamburgerClick }) => {
   };
 
   return (
-    <div className={styles.hamburger} onClick={handleClick}>
-      <span className={`${styles.line} ${isOpen ? styles.open : ''}`}></span>
-      <span className={`${styles.line} ${isOpen ? styles.open : ''}`}></span>
-      <span className={`${styles.line} ${isOpen ? styles.open : ''}`}></span>
+    <div className={s.hamburger} onClick={handleClick}>
+      <span className={`${s.line} ${isOpen ? s.open : ''}`}></span>
+      <span className={`${s.line} ${isOpen ? s.open : ''}`}></span>
+      <span className={`${s.line} ${isOpen ? s.open : ''}`}></span>
     </div>
   );
 };
