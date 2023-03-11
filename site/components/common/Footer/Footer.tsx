@@ -31,10 +31,7 @@ const links = [
         url: '/Policies',
     },
 ]
-// Instagram
-// Location
-// Contact
-// Policies
+
 
 const Footer: FC<Props> = ({ className }) => {
     const rootClassName = cn(s.root, className)
