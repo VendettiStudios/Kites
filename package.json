@@ -21,6 +21,7 @@
   },
   "packageManager": "pnpm@7.5.0",
   "dependencies": {
+    "next": "^13.2.4",
     "pnpm": "^7.29.1"
   }
 }
