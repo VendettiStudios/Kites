@@ -203,3 +203,11 @@
     transform: scale(1.05);
   } */
 /* } */
+@media screen and (min-width: 600px) {
+    .mainContainer {
+      height: 100px;
+    }
+    .menu{
+      top:101px;
+    }
+    }
